@@ -1,0 +1,11 @@
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+thumbs.db
+config.db
+config.rb
+.sass-cache
+configuration.php
+wp-config.php
+node_modules
+.vscode

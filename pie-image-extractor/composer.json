@@ -1,0 +1,26 @@
+{
+	"name": "pie/image-extractor",
+	"description": "Plugin to copy images from media library",
+	"type": "project",
+	"license": "GPL-3.0",
+	"authors": [
+		{
+			"name": "Pieter de Jager",
+			"email": "info@pie.nl"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"PieImageExtractor\\": "./pie-image-extractor"
+		},
+		"classmap": [
+			"./pie-image-extractor"
+		]
+	}
+	
+
+}
+
+
