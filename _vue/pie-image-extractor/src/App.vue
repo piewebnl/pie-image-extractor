@@ -11,8 +11,8 @@
         Extract images from posts and copy
       </button>
     </p>
-    Pages: {{totalPages}}
-    <div v-if="extractingStatus == 'done'" class="notice notice-success">Images extracted and copied!</div>
+    <div v-if="extractingStatus == 'done'" class="notice notice-success">Images extracted and copied!<br />
+    Images are stored in: /wp-content/uploads/pie-image-extractor/</div>
     <p v-if="extractingStatus == 'busy'">Total pages: {{ page }} / {{ totalPages }}</p>
     <template v-for="(jsonResponse, index) in jsonResponses" :key="index">
       <ResponseTable :jsonResponse="jsonResponse"></ResponseTable>

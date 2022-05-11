@@ -5,8 +5,8 @@
 	"license": "GPL-3.0",
 	"authors": [
 		{
-			"name": "Pieter de Jager",
-			"email": "info@pie.nl"
+			"name": "PieWeb",
+			"email": "info@pieweb.nl"
 		}
 	],
 	"minimum-stability": "dev",

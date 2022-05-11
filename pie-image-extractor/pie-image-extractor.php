@@ -5,9 +5,9 @@
 
 /*
  * Plugin Name: Pie Image Extractor
- * Description: Plugin that makes a copy all original images from posts and put when in \wp-content\uploads\pie-images-extractor\
- * Version: 0.0.1
- * Author: Pieter de Jager
+ * Description: Copies all original attached post images and stores them in upload folder
+ * Version: 0.0.2
+ * Author: PieWeb
  */
 
 if (!defined('WPINC')) {
@@ -16,7 +16,7 @@ if (!defined('WPINC')) {
 
 error_reporting(0);
 
-define('PIE_IMAGE_EXTRACTOR_VERSION', '0.0.1');
+define('PIE_IMAGE_EXTRACTOR_VERSION', '0.0.2');
 
 
 // Require once the Composer Autoload

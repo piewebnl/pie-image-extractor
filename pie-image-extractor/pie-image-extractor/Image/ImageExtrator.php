@@ -62,8 +62,22 @@ class ImageExtractor
 
             if ($image['id']) {
 
-
                 $source = get_attached_file($image['id']);
+
+
+                if (!file_exists($source)) {
+                    $this->json_response[] = [
+                        'status' => 'error',
+                        'ok' => false,
+                        'text' => 'Source image not found',
+                        'resource' => [
+                            'post' => $post,
+                            'image' => $image
+                        ]
+                    ];
+                    return;
+                }
+
                 $dest_dir = $this->upload_basedir . $post->post_type;
                 $dest = $dest_dir . '/' . $post->post_name . '-' . $image['post_name'] . '.jpg';
 
@@ -76,7 +90,7 @@ class ImageExtractor
                     $this->json_response[] = [
                         'status' => 'error',
                         'ok' => false,
-                        'text' => 'Image not copied '.$post->post_title,
+                        'text' => 'Image not copied',
                         'resource' => [
                             'post' => $post,
                             'image' => $image
@@ -87,7 +101,7 @@ class ImageExtractor
                     $this->json_response[] = [
                         'status' => 'success',
                         'ok' => true,
-                        'text' => 'Image copied '.$post->post_title,
+                        'text' => 'Image copied',
                         'resource' => [
                             'post' => $post,
                             'image' => $image,
@@ -95,10 +109,8 @@ class ImageExtractor
                         ]
                     ];
                 }
-
             }
         }
     }
-
 
 }

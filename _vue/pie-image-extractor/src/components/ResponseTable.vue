@@ -6,8 +6,8 @@
       </div>
       <div class="cell message">
         <div class="title post-title">{{ item.resource.post.post_title }}</div>
-        <div class="title image-title">
-          {{ item.resource.image.post_title }}
+        <div class="title image-title"> 
+          {{ item.text }}: {{ item.resource.image.post_title }}
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
       <div class="cell message">
         <div class="title post-title">{{ item.resource.post.post_title }}</div>
         <div class="title image-title">
-          {{ item.resource.image.post_title }}
+           {{ item.text }}: {{ item.resource.image.post_title }}
         </div>
       </div>
     </div>
